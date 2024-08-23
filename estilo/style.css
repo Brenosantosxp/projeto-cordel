@@ -1,0 +1,102 @@
+@charset "UTF-8";
+    /* 2 FONTES IMPORTADAS POR GOOGLE FONTES */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+                    /* VARIÁVEIS GLOBAIS */
+:root { /* PSEUDO CLASSE - DEFINIÇÃO P/ DOCUMENTO INTEIRO */
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif; /* CABEÇALHO / RODAPÉ */
+    --fonte2: "Roboto", sans-serif; /* TITULOS */
+    --fonte3: "Sriracha", cursive;  /* CONTEÚDO */
+}
+
+* { /* CONFIGURAÇÃO GLOBAL PARA TODOS OS ELEMENTOS */
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em; /* TAMANHO DA FONTE */
+}
+
+html , body {
+    min-height: 100%; /* TAMANHO MINIMO DA VIEW PORT / CAIXA */
+    background-color: darkgray;
+    font-family: var(--fonte1); /* FONTE PERSONALIZADA DO GOOGLE FONTES */
+}
+
+header {
+    background-color: black; /* COR DE FUNDO */
+    color: white; /* COR DA FONTE */
+    text-align: center; /* TEXTO AO CENTRO */
+}
+
+header > h1 { /* CABEÇALHO DO TITULO PRINCIPAL */
+    padding-top: 50px; /* ESPAÇAMENTO ACIMA DO TITULO */
+    font-variant:small-caps ; /* TODAS AS LETRAS EM MAIÚSCULAS */
+    font-family: var(--fonte2); /* FONTE PERSONALIZADA DO GOOGLE FONTES */
+    font-size: 6vw; /* TAMANHO DA FONTE EM LARGURA */
+}
+
+header > p {
+    padding-bottom: 50px; /* ESPAÇAMENTO ABAIXO */
+}
+
+header a , footer a { /* LINKS DO CABEÇALHO / RODAPÉ */
+    color: white; /* COLR DA FONTE */
+    text-decoration: none; /* SEM DECORAÇÃO */
+    font-weight: bolder; /* DEIXAR EM NEGRITO */
+}
+
+header a:hover, footer a:hover {   /* ANIMAÇÃO AO PASSAR CURSOR EM CIMA */
+    text-decoration: underline; /* DEIXAR SUBLINHADO */
+}
+
+section { /* TODAS AS SEÇÕES DO SITE */
+    padding-top: 10vh; /* ESPAÇAMENTO ACIMA - (vh ALTURA ) */
+    padding-bottom: 10vh; /* ESPAÇAMENTO ABAIXO - (vh ALTURA ) */
+    line-height: 2em; /* ALTURA DAS LINHAS */
+    padding-left: 20px; /* ESPAÇAMENTO A ESQUERDA */
+    font-family: var(--fonte3);
+    font-size: 3.1vw; /* TAMANHO DA FONTE EM LARGURA */
+}
+
+section > p {
+    padding-bottom: 2em; /* ESPAÇAMENTO ABAIXO */
+}
+
+section.normal { /* SEÇÃO E A CLASSE CRIADA PERSONALIZADA */ 
+    background-color: white;
+    color: black;
+}
+
+section.imagem { /* SEÇÃO E A CLASSE CRIADA PERSONALIZADA */
+    background-color: rgba(0, 0, 0, 0.252);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.473); /* SOMBRA DE CAIXA PARA DENTRO */
+    background-attachment: fixed; /* FUNDO FIXO COM CONTEÚDO ROLANDO */
+
+}
+
+section.imagem > p { /* PARÁGRAFO DENTRO DE SEÇÃO DA CLASSE IMAGEM */
+    display: inline-block; /* CAIXA ADPTÁVEL AO CONTEÚDO */
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.396);
+    text-shadow: 1px 1px 0px black; /* SOMBRA DE TEXTO */
+     
+}
+
+section#img01 { /* ID DA SEÇÃO DA CLASSE IMAGEM */
+    background-image: url('../imagens/background001.jpg');
+    background-position: right center; /* IMAGEM POSICIONADA NO CENTRO A DIREITA */
+    background-size: cover; /* TAMANHO DA IMAGEM DE FUNDO COMPLETA COM CORTES  */
+}
+
+section#img02{  /* ID DA SEÇÃO DA CLASSE IMAGEM */
+    background-image: url('../imagens/background002.jpg');
+    background-size: cover;/* TAMANHO DA IMAGEM DE FUNDO COMPLETA COM CORTES  */
+}
+
+footer { /* RODAPÉ */
+    background-color: black; /* COR DE FUNDO */
+    color: white; /* COR DA FONTE */
+    text-align: center; /* TEXTO AO CENTRO */
+    padding: 10px; /* ESPAÇAMENTO P/ TODOS OS LADOS */
+}
